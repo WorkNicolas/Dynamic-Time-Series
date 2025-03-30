@@ -32,7 +32,7 @@ class Controller:
             model_rotate_thread.join()
             
             # Sleep
-            time.sleep(1)
+            time.sleep(0.4) # 0.1 + 0.4 = 0.5; Sometimes some parts are being skipped so that's why I did this
         
     def go_update_plot(self, data_range):
         print(f"Model Subset: {self.model.readDataRange(data_range)}")
